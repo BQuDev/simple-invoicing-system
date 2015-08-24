@@ -10,8 +10,21 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::get('/', 'UsersController@login');
+Route::get('/login', 'UsersController@login');
+Route::post('/login', 'UsersController@authenticate');
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
-Route::get('/', function()
+
+Route::group(array('before' => 'members_auth'), function()
 {
-	return View::make('hello');
+    Route::resource('dashboards', 'DashboardsController');
+    Route::resource('debtors', 'DebtorsController');
+    Route::resource('creditors', 'CreditorsController');
+    Route::resource('invoices', 'InvoicesController');
+    Route::resource('products', 'ProductsController');
+
+
+
+    Route::get('/logout', 'UsersController@logout');
 });

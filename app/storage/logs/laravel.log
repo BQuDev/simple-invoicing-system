@@ -1,0 +1,14 @@
+[2015-08-24 14:41:10] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\simple-invoicing-system\bootstrap\compiled.php:5751
+Stack trace:
+#0 C:\wamp\www\simple-invoicing-system\bootstrap\compiled.php(5073): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\simple-invoicing-system\bootstrap\compiled.php(5061): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\simple-invoicing-system\bootstrap\compiled.php(5053): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\simple-invoicing-system\bootstrap\compiled.php(715): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\simple-invoicing-system\bootstrap\compiled.php(696): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\simple-invoicing-system\bootstrap\compiled.php(7825): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\simple-invoicing-system\bootstrap\compiled.php(8432): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\simple-invoicing-system\bootstrap\compiled.php(8379): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\simple-invoicing-system\bootstrap\compiled.php(11088): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\simple-invoicing-system\bootstrap\compiled.php(657): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 C:\wamp\www\simple-invoicing-system\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
