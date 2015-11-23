@@ -32,7 +32,8 @@
         "Maatwebsite\\Excel\\ExcelServiceProvider",
         "Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider",
         "Andheiberg\\Notify\\NotifyServiceProvider",
-        "Barryvdh\\DomPDF\\ServiceProvider"
+        "Barryvdh\\DomPDF\\ServiceProvider",
+        "Orchestra\\Parser\\XmlServiceProvider"
     ],
     "eager": [
         "Illuminate\\Cookie\\CookieServiceProvider",
@@ -123,7 +124,8 @@
         "validation.presence": "Illuminate\\Validation\\ValidationServiceProvider",
         "command.ide-helper.generate": "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider",
         "command.ide-helper.models": "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider",
-        "dompdf": "Barryvdh\\DomPDF\\ServiceProvider"
+        "dompdf": "Barryvdh\\DomPDF\\ServiceProvider",
+        "orchestra.parser.xml": "Orchestra\\Parser\\XmlServiceProvider"
     },
     "when": {
         "Illuminate\\Foundation\\Providers\\ArtisanServiceProvider": [],
@@ -146,6 +148,7 @@
         "Illuminate\\Translation\\TranslationServiceProvider": [],
         "Illuminate\\Validation\\ValidationServiceProvider": [],
         "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider": [],
-        "Barryvdh\\DomPDF\\ServiceProvider": []
+        "Barryvdh\\DomPDF\\ServiceProvider": [],
+        "Orchestra\\Parser\\XmlServiceProvider": []
     }
 }

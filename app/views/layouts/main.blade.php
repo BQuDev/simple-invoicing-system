@@ -179,14 +179,14 @@
                                           </a>
                                         <ul class="nav dker">
                                             <li >
-                                                 <a href="{{ URL::to('/debtors/create') }}/">
+                                                 <a href="{{ URL::to('/debtors/groups') }}/">
                                                     <i class="i i-dot"></i>
                                                     <span class="font-bold">View Debtor Groups</span>
                                                   </a>
 
                                             </li>
                                         <li >
-                							 <a href="{{ URL::to('/debtors/create') }}/">
+                							 <a href="{{ URL::to('/debtors/groups/create') }}/">
                 								<i class="i i-dot"></i>
                 								<span class="font-bold">Add New Debtor Group</span>
                 							  </a>

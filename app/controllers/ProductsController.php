@@ -11,6 +11,8 @@ class ProductsController extends \BaseController {
 	public function index()
 	{
 		//
+        return View::make('products.index')
+            ->with('products',DB::table('products')->get());
 	}
 
 	/**
@@ -22,6 +24,7 @@ class ProductsController extends \BaseController {
 	public function create()
 	{
 		//
+        return View::make('products.create');
 	}
 
 	/**

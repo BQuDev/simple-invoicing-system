@@ -37,14 +37,14 @@
                     <tbody>
                     @foreach($debtors as $debtor)
                     <?php
-                    $company = DB::table('companies')->where('companies.id','=',$debtor->address_id)->first();
+                    $company = DB::table('companies')->where('companies.id','=',$debtor->company_id)->first();
                     ?>
                       <tr>
                         <td>{{ $company->name }}</td>
                         <td>{{ DB::table('contacts')->where('contacts.id','=',$company->contact_id)->first()->email }}</td>
                         <td>{{ DB::table('debtors_groups')->where('debtors_groups.id','=',$debtor->group_id)->first()->name }}</td>
                         <td>Outstanding amount</td>
-                        <td><a href="{{ URL::to('/debtors/'.$company->name) }}" class="btn btn-s-md btn-primary">More</a></td>
+                        <td><a href="{{ URL::to('/debtors/'.$debtor->no) }}" class="btn btn-s-md btn-primary">More</a></td>
                       </tr>
                     @endforeach
                     </tbody>

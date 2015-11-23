@@ -128,6 +128,7 @@ return array(
         'Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider',
 		'Andheiberg\Notify\NotifyServiceProvider',
 		'Barryvdh\DomPDF\ServiceProvider',
+        'Orchestra\Parser\XmlServiceProvider',
 	),
 
 	/*

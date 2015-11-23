@@ -18,6 +18,12 @@ Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
 Route::group(array('before' => 'members_auth'), function()
 {
+    Route::get('debtors/groups', 'DebtorsController@groups');
+    Route::post('debtors/groups/create', 'DebtorsController@groupsStore');
+    Route::get('debtors/groups/create', 'DebtorsController@groupCreate');
+    Route::get('/debtors/groups/delete/{id}', 'DebtorsController@groupDelete');
+
+
     Route::resource('dashboards', 'DashboardsController');
     Route::resource('debtors', 'DebtorsController');
     Route::resource('creditors', 'CreditorsController');

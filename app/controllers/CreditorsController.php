@@ -1,5 +1,7 @@
 <?php
 
+
+
 class CreditorsController extends \BaseController {
 
 	/**
@@ -11,6 +13,7 @@ class CreditorsController extends \BaseController {
 	public function index()
 	{
 		//
+        return View::make('creditors.index');
 	}
 
 	/**
@@ -33,6 +36,29 @@ class CreditorsController extends \BaseController {
 	public function store()
 	{
 		//
+
+        if (Input::hasFile('camt')) {
+            //
+            //$file = Input::file('camt');
+
+            //$xml = simplexml_load_string(Input::file('camt')->getRealPath());
+            //dd($xml);
+
+
+            $app = new Illuminate\Container\Container;
+            $document = new Orchestra\Parser\Xml\Document($app);
+            $reader = new Orchestra\Parser\Xml\Reader($document);
+
+            $xml = $reader->load(Input::file('camt')->getRealPath());
+            $user = $xml->parse([
+                'id' => ['uses' => 'BkToCstmrStmt.Stmt.Bal.Tp.CdOrPrtry.Cd']
+            ]);
+            print_r($user);
+
+            //dd($user);
+
+        }
+
 	}
 
 	/**
